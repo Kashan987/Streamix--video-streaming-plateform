@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Streamix – Videos dekho</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="/">Stream<span>ix</span></a>
+  <input id="search" type="search" placeholder="Video khojo" aria-label="Video khojo">
+  <button class="btn" id="openAdd">+ Add video</button>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Jo dekhna hai,<br>bas play dabao.</h1>
+    <p>Animation, sci-fi, cars aur bahut kuch. Koi login nahi.</p>
+  </section>
+  <div id="chips" class="chips"></div>
+  <div id="grid" class="grid"></div>
+  <p id="empty" class="empty" hidden>Koi video nahi mila. Doosra naam try karo ya naya video add karo.</p>
+</main>
+
+<dialog id="dlg">
+  <form id="form" method="dialog">
+    <h2>Naya video add karo</h2>
+    <label>Title <input name="title" required></label>
+    <label>Video link (.mp4) <input name="src" type="url" required placeholder="https://..."></label>
+    <label>Thumbnail link <input name="thumb" type="url" placeholder="https://... (optional)"></label>
+    <label>Category <input name="category" placeholder="My videos"></label>
+    <label>Description <textarea name="desc" rows="2"></textarea></label>
+    <div class="row">
+      <button type="button" class="btn ghost" id="cancel">Cancel</button>
+      <button class="btn">Save video</button>
+    </div>
+  </form>
+</dialog>
+
+<footer>Streamix · demo project</footer>
+<script src="js/store.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
